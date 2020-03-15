@@ -8,8 +8,11 @@
     <audio id="heartbeat" src="../assets/heartbeat.mp3" autoplay=true loop=true />
     <div class="paper-container">
     </div>
-    <textarea class="paper" rows="30" cols="80">
+    <textarea id="paper" v-model="paperText" class="paper" rows="30" cols="80" @input="typed">
     </textarea>
+    <div class="phone" v-drag>
+      <img src="../assets/iphone.gif" />
+    </div>
     <div id="cup" v-drag>
       <button @mousedown="coffeeCupButtonDown" @mouseleave="coffeeCupButtonLeave">
         <img src="../assets/coffee-cup.png" />
@@ -28,7 +31,8 @@ export default {
     return {
       stamina: 100.00042069+2/3,
       time: null,
-      staminaTimer: null
+      staminaTimer: null,
+      paperText: ""
     }
   },
   methods: {
@@ -43,6 +47,18 @@ export default {
     updateStamina: function(){
       this.stamina += 1
       console.log(`Stamina: ${this.stamina}`)
+
+    },
+    typed: function(){
+      var Typo = require("typo-js");
+      var dictionary = new Typo("en_US", false, false, { dictionaryPath: "../dictionaries" });
+      // var dictionary = new Typo('en_US');
+      console.log(this.paperText.split(" "))
+      const split = this.paperText.split(" ")
+      const incorrectly_spelled = split.map(x => dictionary.check(x));
+      console.log(incorrectly_spelled)
+      // alert()
+
 
     }
   }
@@ -67,6 +83,19 @@ li {
 
 a {
   color: #42b983;
+}
+
+.phone {
+  
+  position: absolute;
+  top: 400px;
+  left: 100px;
+}
+
+.phone img {
+  width: 240px;
+  height:  auto;
+  transform: rotate3d(1, 1, 1, -12deg);
 }
 
 .paper-background {
