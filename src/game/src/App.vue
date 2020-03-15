@@ -25,7 +25,7 @@ export default {
   margin-top: 60px;
 }
 html {
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Qez5lj45fXjyab8waBAVUwHaEq%26pid%3DApi&f=1");
+  background-image: url("assets/desk.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
