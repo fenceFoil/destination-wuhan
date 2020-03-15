@@ -1,6 +1,9 @@
 <template>
   <div>
     <div id="vignette"></div>
+    <div id="family">
+      <img src="../assets/my-recursive-family.jpg" />
+    </div>
     <audio id="heartbeat" src="../assets/heartbeat.mp3" autoplay=true loop=true />
     <div class="paper-container">
     <textarea class="paper" rows="30" cols="80">
@@ -22,7 +25,7 @@ export default {
   },
   data: function(){
     return {
-      stamina: 100,
+      stamina: 100.00042069+2/3,
       time: null,
       staminaTimer: null
     }
@@ -138,15 +141,25 @@ a {
     }*/
 }
 
-  #vignette {
-    opacity:0.8;
-    position: fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index:1000;  
-    background-image: radial-gradient(rgba(255, 255, 255, 0) 70%, black);
-    pointer-events: none;
-  }
+#vignette {
+  opacity:0.8;
+  position: fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:1000;  
+  background-image: radial-gradient(rgba(255, 255, 255, 0) 70%, black);
+  pointer-events: none;
+}
+
+#family img {
+  position: absolute;
+  top: 20vh;
+  left: 80vw;
+  width:30vh;
+  height:30vh;
+  z-index:4;
+  transform: rotate3d(1, 0, 1, +25deg);
+}
 </style>
