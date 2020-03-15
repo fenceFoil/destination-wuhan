@@ -1,7 +1,12 @@
 <template>
+    <div>
     <div class="paper-container">
     <textarea class="paper" rows="30" cols="80">
     </textarea>
+    </div>
+    <div class="cup-container">
+      <img src="../assets/coffee-cup.png" />
+    </div>
     </div>
 </template>
 
@@ -28,9 +33,11 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
+
 .paper-background {
   
   
@@ -45,12 +52,22 @@ a {
   bottom:0%;
 }
 
+.cup-container {
+  position:absolute;
+  top:10%;
+}
+
+.cup-container img {
+  width: 25%;
+  height: 25%;
+}
+
 .paper{
   padding: 9em 10em;
   font-size: 3em;
   line-height: 2em;
   overflow: hidden;
-  font-family: 'Caveat', cursive;
+  font-family: 'Calligraffitti', cursive;
   background-image: url("../assets/paper.png");
   background-color: transparent;
   -webkit-background-size: cover;
