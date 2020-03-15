@@ -51,7 +51,8 @@ a {
   line-height: 2em;
   overflow: hidden;
   font-family: 'Caveat', cursive;
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffarm8.staticflickr.com%2F7192%2F6796259354_79b96a7234_o.jpg");
+  background-image: url("../assets/paper.png");
+  background-color: transparent;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
