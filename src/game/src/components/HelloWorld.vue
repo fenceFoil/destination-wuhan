@@ -4,6 +4,7 @@
     <div id="family">
       <img src="../assets/my-recursive-family.jpg" />
     </div>
+    <audio id="lofi-radio" src="../assets/BGM.mp3" autoplay=true loop=true />
     <audio id="heartbeat" src="../assets/heartbeat.mp3" autoplay=true loop=true />
     <div class="paper-container">
     </div>
