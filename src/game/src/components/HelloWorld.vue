@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="vignette"></div>
-    <!--<audio id="heartbeat" src=-->
+    <audio id="heartbeat" src="../assets/heartbeat.mp3" autoplay=true loop=true />
     <div class="paper-container">
     <textarea class="paper" rows="30" cols="80">
     </textarea>
