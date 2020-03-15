@@ -6,8 +6,10 @@
     <textarea class="paper" rows="30" cols="80">
     </textarea>
     </div>
-    <div class="cup-container">
-      <img src="../assets/coffee-cup.png" />
+    <div id="cup" v-drag>
+      <button @mousedown="coffeeCupButtonDown" @mouseleave="coffeeCupButtonLeave">
+        <img src="../assets/coffee-cup.png" />
+      </button>
     </div>
   </div>
 </template>
@@ -17,8 +19,31 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data: function(){
+    return {
+      stamina: 100,
+      time: null,
+      staminaTimer: null
+    }
+  },
+  methods: {
+    coffeeCupButtonDown: function(){
+      if (this.staminaTimer) return;
+      this.staminaTimer = setInterval(this.updateStamina, 200);
+    },
+    coffeeCupButtonLeave: function(){
+      clearInterval(this.staminaTimer)
+      this.staminaTimer = null;
+    },
+    updateStamina: function(){
+      this.stamina += 1
+      console.log(`Stamina: ${this.stamina}`)
+
+    }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -41,8 +66,7 @@ a {
 }
 
 .paper-background {
-  
-  
+
 }
 
 .paper-container{
@@ -54,14 +78,25 @@ a {
   bottom:0%;
 }
 
-.cup-container {
+#cup {
   position:absolute;
   top:10%;
+  z-index: 9;
+  width: 250px;
+  height: 250px;
 }
 
-.cup-container img {
-  width: 25%;
-  height: 25%;
+#cup button {
+  background: transparent;
+  visibility: hidden;
+  border: none !important;
+  font-size:0;
+}
+
+#cup img {
+  width: 250px;
+  height: 250px;
+  visibility: visible;
 }
 
 .paper{
