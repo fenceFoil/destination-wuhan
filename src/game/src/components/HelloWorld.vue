@@ -1,5 +1,7 @@
 <template>
-    <div>
+  <div>
+    <div id="vignette"></div>
+    <!--<audio id="heartbeat" src=-->
     <div class="paper-container">
     <textarea class="paper" rows="30" cols="80">
     </textarea>
@@ -7,7 +9,7 @@
     <div class="cup-container">
       <img src="../assets/coffee-cup.png" />
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -100,4 +102,16 @@ a {
         }
     }*/
 }
+
+  #vignette {
+    opacity:0.8;
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;  
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 70%, black);
+    pointer-events: none;
+  }
 </style>
