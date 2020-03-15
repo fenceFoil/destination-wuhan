@@ -27,7 +27,7 @@ export default {
 body {
   background-image: url("./assets/wood_pattern_@2X.png");
   background-attachment: fixed;
-  overflow:hidden;
+  /*overflow:hidden;*/
 }
 
 </style>

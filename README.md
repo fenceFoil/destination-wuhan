@@ -38,3 +38,9 @@ You: If I can finish the paper before my flight I can avoid going!
 ## Sound Credits
 
 "Heartbeat, Regular, Single, 01-01, LOOP.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
+
+## Image Credits
+
+https://www.publicdomainpictures.net/en/view-image.php?image=317486&picture=coronavirus-advice
+https://www.publicdomainpictures.net/en/view-image.php?image=20113&picture=couple-with-blank-frame
+https://www.publicdomainpictures.net/en/view-image.php?image=42647&picture=old-wood-frame
