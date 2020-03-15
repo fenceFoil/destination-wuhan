@@ -32,7 +32,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow:hidden;
+  /*overflow:hidden;*/
 }
 
 </style>

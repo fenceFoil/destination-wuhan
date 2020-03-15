@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div id="vignette"></div>
+    <div id="vignette"/>
     <div id="family">
       <img src="../assets/my-recursive-family.jpg" />
     </div>
     <audio id="heartbeat" src="../assets/heartbeat.mp3" autoplay=true loop=true />
     <div class="paper-container">
+    </div>
     <textarea class="paper" rows="30" cols="80">
     </textarea>
-    </div>
     <div id="cup" v-drag>
       <button @mousedown="coffeeCupButtonDown" @mouseleave="coffeeCupButtonLeave">
         <img src="../assets/coffee-cup.png" />
@@ -72,13 +72,24 @@ a {
 
 }
 
-.paper-container{
-  transform: scale3d(.25,.25,.25);
+.paper{
+  /*transform: scale3d(.25,.25,.25);*/
   position:absolute;
-  top:-20%;
-  left:0%;
-  right:-20%;
-  bottom:0%;
+  /*top:20%;
+  left:20%;*/
+  top: -120vh;
+  left: -12vw;
+  z-index: 50;
+  
+  transform: rotate3d(1, 1, 1, -45deg) scale3d(0.25, 0.25, 0.25);
+  transition: 1s ease-in-out;
+}
+
+.paper:focus {
+  top: -120vh;
+  left: -25vw;
+  transform: scale3d(0.4, 0.4, 0.4);
+  transition: 1s ease-in-out;
 }
 
 #cup {
@@ -118,7 +129,6 @@ a {
   background-attachment: fixed;
   
   opacity:1;
-  transform: rotate3d(1, 1, 1, -45deg);
 
 /*  -moz-animation-name: spin;
     -moz-animation-duration: 4000ms;
