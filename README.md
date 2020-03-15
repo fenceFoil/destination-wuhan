@@ -44,3 +44,8 @@ You: If I can finish the paper before my flight I can avoid going!
 https://www.publicdomainpictures.net/en/view-image.php?image=317486&picture=coronavirus-advice
 https://www.publicdomainpictures.net/en/view-image.php?image=20113&picture=couple-with-blank-frame
 https://www.publicdomainpictures.net/en/view-image.php?image=42647&picture=old-wood-frame
+https://www.toptal.com/designers/subtlepatterns/wood-pattern/
+
+## Music Credits
+
+https://freemusicarchive.org/music/Mild_Wild/a_Queens_Lodge_b_Crooked_Straight/Crooked_Straight
